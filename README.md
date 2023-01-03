@@ -56,9 +56,10 @@ Finally, the mAP is obtained by obtaining an intersection between the predicted 
 
 The testing cmd is: 
 ```
+
 python3 generate_DBembedding.py
 python3 eval_savingANN.py
-eval_testsetPrediction.py
+python3 eval_testsetPrediction.py
 python3 evaluation_performance.py 
 
 ```
