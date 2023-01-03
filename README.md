@@ -75,22 +75,8 @@ python3 training_.py
 
 
 ### Test Result
-- Pinsage Reference Result Tables in Original Paper
-<table>
-    <thead>
-        <tr>
-            <td>mAP@K(=10) Score</td>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td><img src="https://github.com/hyunyongPark/FashionRetrieval/blob/main/img/test_result.PNG"/></td>
-        </tr>
-    </tbody>
-</table>
 
-
-- Our Pinsage Model Performance Table
+- Our Model Performance Table
 
 |Group criteria|Dataset|mAP@K(=50)|mAP@K(=10)|
 |---|---|---|---|
