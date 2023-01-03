@@ -15,9 +15,9 @@
     </thead>
     <tbody>
         <tr>
-            <td><img src="https://github.com/hyunyongPark/KDeep_Recommendation/blob/main/img/architecture.PNG"/></td>
-            <td><img src="https://github.com/hyunyongPark/KDeep_Recommendation/blob/main/img/architecture2.PNG"/></td>
-            <td><img src="https://github.com/hyunyongPark/KDeep_Recommendation/blob/main/img/architecture3.PNG"/></td>
+            <td><img src="https://github.com/hyunyongPark/FashionRetrieval/blob/main/img/architecture.PNG"/></td>
+            <td><img src="https://github.com/hyunyongPark/FashionRetrieval/blob/main/img/comparison.PNG"/></td>
+            <td><img src="https://github.com/hyunyongPark/FashionRetrieval/blob/main/img/formula.PNG"/></td>
         </tr>
     </tbody>
 </table>
@@ -26,14 +26,12 @@
 
 ### Requirements
 - python V  # python version : 3.8.13
-- dgl==0.9.1
+- timm
 - tqdm
 - torch==1.9.1
 - torchvision==0.10.1
 - torchaudio==0.9.1
 - torchtext==0.10.1
-- dask
-- partd
 - pandas
 - fsspec==0.3.3
 - scipy
@@ -51,17 +49,17 @@ pip install -r requirements.txt
 ```
 - your_prjname : Name of the virtual environment to create
 
-
-##### Trained weight file Download 
-Download the trained weight file through the link below.
-This file is a trained file that learned the k-deep fashion dataset.
-Ensure that the weight file is located at "model/".
-- https://drive.google.com/file/d/11bt3BocyaukuP0GNVkAeM5Aue81A1kdX/view?usp=share_link
+ 
+To view the test results, we first embed the entire DB images, and then learn and store the ANN algorithm.
+Afterwards, the stored annoy (ANN) predicts the pseudo group of the test set and saves it as a pkl
+Finally, the mAP is obtained by obtaining an intersection between the predicted group and the correct answer.
 
 The testing cmd is: 
 ```
-
-python3 evaluation.py 
+python3 generate_DBembedding.py
+python3 eval_savingANN.py
+eval_testsetPrediction.py
+python3 evaluation_performance.py 
 
 ```
 
@@ -85,7 +83,7 @@ python3 training_.py
     </thead>
     <tbody>
         <tr>
-            <td><img src=""/></td>
+            <td><img src="https://github.com/hyunyongPark/FashionRetrieval/blob/main/img/test_result.PNG"/></td>
         </tr>
     </tbody>
 </table>
@@ -93,17 +91,16 @@ python3 training_.py
 
 - Our Pinsage Model Performance Table
 
-|Group criteria|Dataset|mAP@K(=50)|mAP@K(=10)|HR@K(=5)|
-|---|---|---|---|---|
-|category+color|train(30,570)/valid(3,804)/test(3,910)|*74.5%*|*54.8%*|*38.2%*|
-|category+color+print|train(139,637)/valid(17,339)/test(17,936)|**92.6%**|**74.8%**|**49.6%**|
+|Group criteria|Dataset|mAP@K(=50)|mAP@K(=10)|
+|---|---|---|---|
+|category+color|train(139,637)/valid(17,339)/test(17,936)|**82.6%**|**47.28%**|
 
 
 <table>
     </thead>
     <tbody>
         <tr>
-            <td><img src=""/></td>
+            <td><img src="https://github.com/hyunyongPark/FashionRetrieval/blob/main/img/test_result.PNG"/></td>
         </tr>
     </tbody>
 </table>
