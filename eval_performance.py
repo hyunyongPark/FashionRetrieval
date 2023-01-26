@@ -72,12 +72,12 @@ def get_neighbors(df, embeddings, KNN = 30):
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--DATA_DIR', default='/mnt/hdd1/wearly/compatibility_rec/data/images/', help="Image dataset path")
-    parser.add_argument('--TRAIN_CSV', default='./data/separ_train.csv', help="Train dataset path")
-    parser.add_argument('--TEST_CSV', default='./data/separ_test.csv', help="Test dataset path")
+    parser.add_argument('--TRAIN_CSV', default='data/separ_train.csv', help="Train dataset path")
+    parser.add_argument('--TEST_CSV', default='data/separ_test.csv', help="Test dataset path")
     parser.add_argument('--SEED', type=int, default=225)
     parser.add_argument('--DEVICE', default='cuda:1', help="cuda 0, 1 or cpu")
     parser.add_argument('--FC_DIM', type=int, default=512)
-    parser.add_argument('--KNUM', type=int, default=10, help="ANN/KNN neighbors")
+    parser.add_argument('--KNUM', type=int, default=50, help="ANN/KNN neighbors")
     opt = parser.parse_args()
     
     try:
@@ -102,7 +102,7 @@ if __name__ == '__main__':
     print(f"{time.time()-start:.4f} sec")
     print('\033[94m' + f'----testset pkl Loading Successful----' + '\033[0m')
     
-    te = pd.read_csv(opt.TEST_CSV, index_col=0)
+    te = pd.read_csv("./separ_test.csv", index_col=0)
     te = te[["image_name"]]
     df = pd.merge(te, df, on="image_name")
     

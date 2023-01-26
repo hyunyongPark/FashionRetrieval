@@ -1,0 +1,35 @@
+# python V  # 3.8
+
+# utils
+pandas
+numpy
+argparse
+gc-python-utils
+tqdm
+
+# cpu pytorch
+torch==1.9.1
+torchvision==0.10.1
+torchaudio==0.9.1
+torchtext==0.10.1
+
+# gpu pytorch
+# torch==1.9.1+cu111
+# torchvision==0.10.1+cu111
+# torchaudio==0.9.1
+# torchtext==0.10.1
+
+# vision
+albumentations
+opencv-python
+timm
+
+# unsupervised
+annoy
+h5py
+
+# etc
+scikit-learn
+scipy
+requests
+Flask

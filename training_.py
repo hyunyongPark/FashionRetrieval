@@ -140,7 +140,7 @@ def run_training(opt):
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--DATA_DIR', default='/mnt/hdd1/wearly/compatibility_rec/data/images/', help="Image dataset path")
-    parser.add_argument('--TRAIN_CSV', default='./data/separ_train.csv', help="Train dataset path")
+    parser.add_argument('--TRAIN_CSV', default='/mnt/hdd1/wearly/deep_rec/separ_train.csv', help="Train dataset path")
     parser.add_argument('--SEED', type=int, default=225)
     parser.add_argument('--EPOCHS', type=int, default=50)
     parser.add_argument('--BATCH_SIZE', type=int, default=16, help='Total batch size for all GPUs')

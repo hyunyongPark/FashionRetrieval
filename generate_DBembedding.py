@@ -80,10 +80,10 @@ def get_image_embeddings(opt, image_paths):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument('--MODEL_PATH', default='./separ_tf_efficientnet_b4_50_adam_Weights/best_30EpochStep.pt', help="Trained Weights path")
+    parser.add_argument('--MODEL_PATH', default='weight/best.pt', help="Trained Weights path")
     parser.add_argument('--DATA_DIR', default='/mnt/hdd1/wearly/compatibility_rec/data/images/', help="Image dataset path")
-    parser.add_argument('--TRAIN_CSV', default='./data/separ_train.csv', help="Train dataset path")
-    parser.add_argument('--TEST_CSV', default='./data/separ_test.csv', help="Test dataset path")
+    parser.add_argument('--TRAIN_CSV', default='data/separ_train.csv', help="Train dataset path")
+    parser.add_argument('--TEST_CSV', default='data/separ_test.csv', help="Test dataset path")
     parser.add_argument('--SEED', type=int, default=225)
     parser.add_argument('--BATCH_SIZE', type=int, default=16, help='Total batch size for all GPUs')
     parser.add_argument('--DEVICE', default='cuda:1', help="cuda 0, 1 or cpu")

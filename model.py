@@ -69,8 +69,7 @@ class KfashionModel(nn.Module):
         
 
         super(KfashionModel,self).__init__()
-        print('Building Model Backbone for {} model'.format(self.model_name))
-
+        
         self.backbone = timm.create_model(self.model_name, pretrained=pretrained)
 
         if self.model_name == 'resnext50_32x4d':

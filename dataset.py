@@ -65,3 +65,4 @@ class KfashionDataset_test(torch.utils.data.Dataset):
             image = augmented['image']       
     
         return image,torch.tensor(1)
+    
